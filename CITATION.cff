@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "Hydrogen Atom From Scratch"
+message: "If you use this material, please cite it using this metadata."
+authors:
+  - family-names: "Azad"
+    given-names: "Kumar"
+repository-code: "https://github.com/KrAzad0/Hydrogen-Atom-From-Scratch"
+license: "MIT"
+version: "1.0.0"
+date-released: "2026-03-29"
+abstract: >-
+  A concise from-scratch development of the hydrogen atom in nonrelativistic
+  quantum mechanics, including the Coulomb problem, reduced mass,
+  Schrodinger equation, spherical separation, energy spectrum, and the ground state.
