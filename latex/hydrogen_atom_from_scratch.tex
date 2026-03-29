@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{hyperref}
+\title{Hydrogen Atom From Scratch}
+\author{Kumar Azad}
+\date{2026}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The hydrogen atom is the foundational exactly solvable bound-state problem in nonrelativistic quantum mechanics. It consists of an electron and a proton interacting through the Coulomb potential.
+
+\section{Two-body Hamiltonian}
+The classical Hamiltonian is
+\[
+H = \frac{\mathbf p_e^2}{2m_e} + \frac{\mathbf p_p^2}{2m_p} - \frac{e^2}{4\pi\varepsilon_0 |\mathbf r_e - \mathbf r_p|}.
+\]
+Introducing center-of-mass and relative coordinates reduces the problem to the relative Hamiltonian
+\[
+H_{\mathrm{rel}} = \frac{\mathbf p^2}{2\mu} - \frac{e^2}{4\pi\varepsilon_0 r},
+\]
+where
+\[
+\mu = \frac{m_e m_p}{m_e + m_p}
+\]
+is the reduced mass.
+
+\section{Quantum formulation}
+Upon quantization, $\mathbf p \to -i\hbar \nabla$, so the stationary Schr\"odinger equation becomes
+\[
+\left[-\frac{\hbar^2}{2\mu}\nabla^2 - \frac{e^2}{4\pi\varepsilon_0 r}\right]\psi(\mathbf r) = E\psi(\mathbf r).
+\]
+Because the potential depends only on $r$, spherical coordinates are natural.
+
+\section{Separation of variables}
+Write
+\[
+\psi(r,\theta,\phi)=R(r)Y_{\ell m}(\theta,\phi).
+\]
+The angular part is solved by spherical harmonics, with eigenvalue equations
+\[
+\hat L^2 Y_{\ell m}=\hbar^2 \ell(\ell+1)Y_{\ell m},
+\qquad
+\hat L_z Y_{\ell m}=\hbar m Y_{\ell m}.
+\]
+
+\section{Energy spectrum}
+Normalizability of the radial equation yields the bound-state spectrum
+\[
+E_n = -\frac{\mu e^4}{2(4\pi\varepsilon_0)^2\hbar^2}\frac{1}{n^2},
+\qquad n=1,2,3,\dots
+\]
+For hydrogen,
+\[
+E_n \approx -\frac{13.6\,\mathrm{eV}}{n^2}.
+\]
+
+\section{Ground state}
+The ground state has quantum numbers $n=1$, $\ell=0$, and $m=0$. Its wavefunction is
+\[
+\psi_{100}(r)=\frac{1}{\sqrt{\pi a_0^3}}e^{-r/a_0},
+\]
+where the Bohr radius is
+\[
+a_0 = \frac{4\pi\varepsilon_0\hbar^2}{\mu e^2}.
+\]
+
+\section{Spectroscopy and selection rules}
+Transitions between energy levels produce hydrogen spectral lines. For electric dipole transitions, the main selection rules are
+\[
+\Delta \ell = \pm 1,
+\qquad
+\Delta m = 0, \pm 1.
+\]
+
+\section{Conclusion}
+The hydrogen atom provides the cleanest exact example of quantized bound states, angular momentum, discrete spectra, and wave mechanics in atomic physics. It remains the starting point for understanding fine structure, perturbation theory, and quantum electrodynamic corrections.
+
+\end{document}
